@@ -17,32 +17,35 @@ st.sidebar.title("Did you know?")
 #counts the total number of charities, adds comma separator and displays
 total_number_of_charities = len(df.index)
 total_number_of_charities = ("{:,}".format(total_number_of_charities)) 
-st.sidebar.subheader('Number of charities registered with the UK Charity Commission:',)
-st.sidebar.write(total_number_of_charities)
+st.sidebar.write('Number of charities registered with the UK Charity Commission:',total_number_of_charities)
 
 # adds total income of all charities, converts to integer, formats with comma separator and displays
 total = df['Income'].sum()
 total = int(total)
 total = ("{:,}".format(total)) 
-st.sidebar.subheader('Total annual income of registered charities: ',)
-st.sidebar.write('£',total)
+st.sidebar.write('Total annual income of registered charities: £',total)
 
 # staff total
 staff = df['Employees'].sum()
 staff = int(staff)
 staff = ("{:,}".format(staff)) 
-st.sidebar.subheader('Total number of employees: ',)
-st.sidebar.write(staff)
+st.sidebar.write('Total number of employees: ',staff)
 
 # volunteers total
 volunteers = df['Volunteers'].sum()
 volunteers = int(volunteers)
 volunteers = ("{:,}".format(volunteers)) 
-st.sidebar.subheader('Total number of volunteers: ',)
-st.sidebar.write(volunteers)
+st.sidebar.write('Total number of volunteers: ',volunteers)
+
+# trustees total
+trustees = df['Trustees'].sum()
+trustees = int(trustees)
+trustees = ("{:,}".format(trustees)) 
+st.sidebar.write('Total number of trustees: ',trustees)
+
 
 # acknowledgment
-st.sidebar.write('Data from: https://charitybase.uk')
+st.sidebar.write('All data from: https://charitybase.uk')
 
 # subheading
 st.markdown("### Search for charities in your area")
