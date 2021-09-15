@@ -35,7 +35,7 @@ toml==0.10.1
 toolz==0.10.0
 tornado==5.1.1
 tzlocal==2.1
-urllib3==1.26.5 
+urllib3==1.25.11
 validators==0.18.1
 watchdog==0.10.3
 zipp==3.1.0
