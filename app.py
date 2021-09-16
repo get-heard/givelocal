@@ -74,6 +74,7 @@ if authority:
 	
 	# counts number of charities in area and displays
 	number_of_charities = len(df2.index)
+	number_of_charities = ("{:,}".format(number_of_charities)) 
 	st.write('Number of charities in this area is:', number_of_charities)
 
 	# finds biggest charity formats as integer with comma separator and displays
@@ -87,6 +88,12 @@ if authority:
 	sum = int(sum)
 	sum = ("{:,}".format(sum)) 
 	st.write('The total annual income of all charities in this area is: £',sum)
+
+	# average income per charity
+	average	= df2['Income'].sum()/len(df2.index)
+	average = round(average,2)
+	average = ("{:,}".format(average)) 
+	st.write('The average annual income per charity in this area is: £',average)
 
 # subheading
 st.markdown("### To view data select one or more boxes")
