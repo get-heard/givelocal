@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 
 #the heading of the app
-st.title('Charities Near Me')
+st.title('Give Local')
 
 # add image
 st.image(image="Image by Tumisu from Pixabay.png")
